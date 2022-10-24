@@ -1,11 +1,11 @@
 FROM node:16.14-alpine
 
-WORKDIR /app-backend
-
-COPY package.json .
-
-RUN npm install
+WORKDIR /app-frontend
 
 COPY . .
 
-CMD ["npm", "start"]
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm","start"]
