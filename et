@@ -1,0 +1,35 @@
+[33mcommit 321b39d25c490eb6292c462a3c569af72e7d8067[m[33m ([m[1;36mHEAD -> [m[1;32mroiney-beal-sd-021-a-trybe-futebol-clube[m[33m, [m[1;31morigin/roiney-beal-sd-021-a-trybe-futebol-clube[m[33m)[m
+Author: Roiney Beal <nei_beal@hotmail.com>
+Date:   Fri Oct 21 17:13:52 2022 -0300
+
+    jesus
+
+[33mcommit 1d7f5adc804d7f13c95859cc15521de9fdef58bd[m
+Author: Roiney Beal <nei_beal@hotmail.com>
+Date:   Fri Oct 21 15:50:04 2022 -0300
+
+    rotas chamadas no app
+
+[33mcommit 45877eeda19bb9fa4b177a3cc813f5aa8254b785[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/lucas-costa-tfc[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Danilo Oliveira Silva <43826155+Danilo-Oliveira-Silva@users.noreply.github.com>
+Date:   Fri Oct 21 12:57:49 2022 -0300
+
+    fix: update README.md
+
+[33mcommit b4ab7f997c0907ffcadd91b66a8bcbffb244bf22[m
+Author: trybe-tech-ops <82593112+trybe-tech-ops@users.noreply.github.com>
+Date:   Thu Oct 20 17:01:18 2022 -0300
+
+    .github/workflows/main.yml updated
+
+[33mcommit c42c4a0afb4b26ac3266da39ecafe0bc590a2c42[m
+Author: trybe-tech-ops <82593112+trybe-tech-ops@users.noreply.github.com>
+Date:   Thu Oct 20 17:01:17 2022 -0300
+
+    README.md updated
+
+[33mcommit 8f4ed288b9331fbf582ff4c904e028a67eecce84[m
+Author: trybe-tech-ops <82593112+trybe-tech-ops@users.noreply.github.com>
+Date:   Thu Oct 20 17:01:16 2022 -0300
+
+    Initial commit
