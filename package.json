@@ -36,5 +36,15 @@
     "jsonwebtoken": "8.5.1",
     "puppeteer": "13.2.0",
     "uuid": "8.3.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tryber/sd-021-a-trybe-futebol-clube.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tryber/sd-021-a-trybe-futebol-clube/issues"
+  },
+  "homepage": "https://github.com/tryber/sd-021-a-trybe-futebol-clube#readme"
 }
