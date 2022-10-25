@@ -10,9 +10,9 @@ class UserService {
   };
 
   getRole = (token: string) => {
-    const teste = decodeToken(token);
+    const { role } = decodeToken(token);
 
-    return teste;
+    return role;
   };
 }
 

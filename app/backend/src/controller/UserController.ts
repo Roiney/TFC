@@ -14,8 +14,11 @@ export default class UserController {
     const token = authorization.replace('Bearer ', '');
     console.log(token);
 
-    const { role } = this.service.getRole(token as string);
+    const role1 = this.service.getRole(token as string);
+    console.log(role1);
 
-    return res.status(200).json(role);
+    const teste = { role: role1 };
+
+    return res.status(200).json(teste);
   };
 }
