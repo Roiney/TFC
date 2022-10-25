@@ -1,6 +1,7 @@
 import { compare } from 'bcryptjs';
 import { Request, Response } from 'express';
 import UserService from '../service/UserService';
+import generateToke from '../utilis/generateToke';
 
 const service = new UserService();
 
@@ -23,7 +24,10 @@ async function authentication(req: Request, res: Response) {
     return res.status(401).json({ message: 'Incorrect email or password' });
   }
 
-  res.status(200).json({ message: 'ate aqui' });
+  const payload = { role: login.role, email: login.email };
+  const token = generateToke(payload);
+
+  res.status(200).json({ token });
 }
 
 export default authentication;
