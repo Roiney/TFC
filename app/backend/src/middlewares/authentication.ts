@@ -11,6 +11,8 @@ async function authentication(req: Request, res: Response) {
     return res.status(400).json({ message: 'All fields must be filled' });
   }
 
+  console.log('chegou');
+
   const login = await service.findEmail(email);
 
   if (!login) return res.status(401).json({ message: 'Incorrect email or password' });

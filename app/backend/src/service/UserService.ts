@@ -2,16 +2,13 @@ import { IUser } from '../interfaces/IUser';
 import User from '../database/models/UserModel';
 
 class UserService {
-  public model = User;
+  public findEmail = async (email: string): Promise<IUser | null> => {
+    console.log(email);
+    const user = await User.findOne({ where: { email } }) as User;
+    console.log('service', user);
 
-  constructor() {
-    this.findEmail = this.findEmail.bind(this);
-  }
-
-  public async findEmail(email: string): Promise<IUser | null> {
-    const user = await this.model.findOne({ where: { email } });
     return user;
-  }
+  };
 }
 
 export default UserService;

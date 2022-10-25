@@ -1,8 +1,7 @@
 import { Model, INTEGER, STRING } from 'sequelize';
-import { IUser, UserCreation } from '../../interfaces/IUser';
 import db from '.';
 
-class User extends Model<IUser, UserCreation> {
+class User extends Model {
   declare id: number;
   declare username: string;
   declare email: string;

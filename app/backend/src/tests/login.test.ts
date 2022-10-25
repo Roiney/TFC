@@ -16,6 +16,9 @@ describe('/login', () => {
         const response = await chai.request(app).post('/login').send( noPasswordLoginMock);
 
         expect(response.status).to.be.equal(400);
+        console.log('teste', response.status);
+        
         expect(response.body).to.be.equal(missingFieldsMessage);
+
     })
 })
