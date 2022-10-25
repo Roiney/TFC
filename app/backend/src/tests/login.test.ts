@@ -15,7 +15,7 @@ const { expect } = chai;
 
 import { noPasswordLoginMock, noEmailLoginMock, InvalidEmail, InvalidPassword, mockFind, mockToken, mockValid } from './mocks/Login';
 
-describe('/login', () => {
+describe('Testandp a rota /login', () => {
     beforeEach(sinon.restore)
     describe('testando o ENDPOIT /login', () => {
         it('retorno da menssagem "All fields must be filled" faltando password', async () => {
