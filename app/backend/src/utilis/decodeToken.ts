@@ -4,7 +4,7 @@ import { IJWT } from '../interfaces/IJwt';
 const decodeToken = (token: string) => {
   console.log('decode', token);
 
-  const { payload }= verify(token, process.env.JWT_SECRET as string) as IJWT;
+  const { payload } = verify(token, process.env.JWT_SECRET as string) as IJWT;
   console.log(payload);
 
   return payload;
