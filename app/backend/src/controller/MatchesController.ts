@@ -42,6 +42,7 @@ export default class MatchesController {
         message: 'It is not possible to create a match with two equal teams',
       });
     }
+    
 
     const change = await this.service.changeProgess(id);
 
