@@ -12,7 +12,8 @@ export default class MatchesController {
     if (inProgress) {
       const teste = await this.service.getAllMatchesInProgress(inProgress === 'true');
       return res.status(200).json(teste);
-    } {
+    }
+    {
       const allMatches = await matchesModel.findAll({
         include: [
           { model: TeamModel, as: 'teamHome', attributes: { exclude: ['id'] } },

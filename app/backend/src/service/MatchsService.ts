@@ -1,5 +1,5 @@
 import matchesModel from '../database/models/MatchesModel';
-import TeamModel from '../database/models/TeamModel'
+import TeamModel from '../database/models/TeamModel';
 
 export default class MatchesService {
   public getAllMatchesInProgress = async (inProgress: boolean) => {
