@@ -23,6 +23,6 @@ export default class MatchesService {
 
   public changeProgess = async (id: string) => {
     await matchesModel.update({ inProgess: false }, { where: { id } });
-    return true;
+    return { message: 'Finished' };
   };
 }

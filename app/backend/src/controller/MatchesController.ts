@@ -1,10 +1,14 @@
 import { Request, Response } from 'express';
+import TeamsServive from '../service/TeamsService';
 import matchesModel from '../database/models/MatchesModel';
 import TeamModel from '../database/models/TeamModel';
 import MatchesService from '../service/MatchsService';
 
 export default class MatchesController {
-  constructor(private service = new MatchesService()) { }
+  constructor(
+    private service = new MatchesService(),
+    private serviceTeams = new TeamsServive(),
+  ) { }
 
   public getAll = async (req: Request, res: Response) => {
     const { inProgress } = req.query;
@@ -27,6 +31,17 @@ export default class MatchesController {
 
   public insertMatches = async (req: Request, res: Response) => {
     const partida = req.body;
+    const { homeTeam, awayTeam } = req.body;
+
+    if (homeTeam === awayTeam) {
+      return res.status(422).json({
+        message: 'It is not possible to create a match with two equal teams',
+      });
+    }
+
+    const validateTeams = await this.serviceTeams.getTeamById(homeTeam);
+
+    console.log(validateTeams);
 
     const insert = await this.service.insert(partida);
 
@@ -35,19 +50,11 @@ export default class MatchesController {
 
   public changeProgess = async (req: Request, res: Response) => {
     const { id } = req.params;
-    const { homeTeam, awayTeam } = req.body;
 
-    if (homeTeam === awayTeam) {
-      return res.status(422).json({
-        message: 'It is not possible to create a match with two equal teams',
-      });
-    }
-    
+    console.log('chegou');
 
-    const change = await this.service.changeProgess(id);
+    const teste = await this.service.changeProgess(id);
 
-    if (change === true) {
-      return res.status(200).json({ message: 'Finished' });
-    }
+    return res.status(200).json(teste);
   };
 }
