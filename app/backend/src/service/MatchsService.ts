@@ -20,4 +20,9 @@ export default class MatchesService {
     });
     return insertdMatch;
   };
+
+  public changeProgess = async (id: string) => {
+    await matchesModel.update({ inProgess: false }, { where: { id } });
+    return true;
+  };
 }

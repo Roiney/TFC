@@ -32,4 +32,21 @@ export default class MatchesController {
 
     return res.status(201).json(insert);
   };
+
+  public changeProgess = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const { homeTeam, awayTeam } = req.body;
+
+    if (homeTeam === awayTeam) {
+      return res.status(422).json({
+        message: 'It is not possible to create a match with two equal teams',
+      });
+    }
+
+    const change = await this.service.changeProgess(id);
+
+    if (change === true) {
+      return res.status(200).json({ message: 'Finished' });
+    }
+  };
 }
