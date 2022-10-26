@@ -1,3 +1,4 @@
+import { IResultado } from '../interfaces/IResultao';
 import matchesModel from '../database/models/MatchesModel';
 import TeamModel from '../database/models/TeamModel';
 
@@ -24,5 +25,14 @@ export default class MatchesService {
   public changeProgess = async (id: string) => {
     await matchesModel.update({ inProgess: false }, { where: { id } });
     return { message: 'Finished' };
+  };
+
+  public update = async (id: number, resultado: IResultado) => {
+    const { homeTeamGoals, awayTeamGoals } = resultado;
+    console.log('service', id);
+
+    console.log(homeTeamGoals);
+
+    await matchesModel.update({ awayTeamGoals, homeTeamGoals }, { where: { id } });
   };
 }
