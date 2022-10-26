@@ -24,4 +24,12 @@ export default class MatchesController {
       return res.status(200).json(allMatches);
     }
   };
+
+  public insertMatches = async (req: Request, res: Response) => {
+    const partida = req.body;
+
+    const insert = await this.service.insert(partida);
+
+    return res.status(201).json(insert);
+  };
 }

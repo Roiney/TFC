@@ -12,4 +12,12 @@ export default class MatchesService {
     });
     return teste;
   };
+
+  public insert = async (match: matchesModel) => {
+    const insertdMatch = await matchesModel.create({
+      ...match,
+      inProgress: true,
+    });
+    return insertdMatch;
+  };
 }
