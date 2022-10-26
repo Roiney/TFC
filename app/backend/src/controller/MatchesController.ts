@@ -40,8 +40,14 @@ export default class MatchesController {
     }
 
     const validateTeams = await this.serviceTeams.getTeamById(homeTeam);
+    if (!validateTeams) {
+      return res.status(404).json({ message: 'There is no team with such id!' });
+    }
 
-    console.log(validateTeams);
+    const validateTeams1 = await this.serviceTeams.getTeamById(awayTeam);
+    if (!validateTeams1) {
+      return res.status(404).json({ message: 'There is no team with such id!' });
+    }
 
     const insert = await this.service.insert(partida);
 
@@ -50,8 +56,6 @@ export default class MatchesController {
 
   public changeProgess = async (req: Request, res: Response) => {
     const { id } = req.params;
-
-    console.log('chegou');
 
     const teste = await this.service.changeProgess(id);
 
