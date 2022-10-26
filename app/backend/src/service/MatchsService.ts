@@ -23,15 +23,16 @@ export default class MatchesService {
   };
 
   public changeProgess = async (id: string) => {
-    await matchesModel.update({ inProgess: false }, { where: { id } });
+    console.log('chegou');
+    await matchesModel.update({ inProgress: false }, { where: { id } });
+    const teste = await matchesModel.findAll({ where: { id } });
+    console.log(teste);
+
     return { message: 'Finished' };
   };
 
   public update = async (id: number, resultado: IResultado) => {
     const { homeTeamGoals, awayTeamGoals } = resultado;
-    console.log('service', id);
-
-    console.log(homeTeamGoals);
 
     await matchesModel.update({ awayTeamGoals, homeTeamGoals }, { where: { id } });
   };

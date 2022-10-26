@@ -59,13 +59,14 @@ export default class MatchesController {
 
     const teste = await this.service.changeProgess(id);
 
+    console.log(teste);
+
     return res.status(200).json(teste);
   };
 
   public update = async (req: Request, res: Response) => {
     const { id } = req.params;
     const resultado = req.body;
-    console.log(id);
 
     await this.service.update(Number(id), resultado);
 
