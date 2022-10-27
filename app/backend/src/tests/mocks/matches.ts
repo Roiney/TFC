@@ -1350,3 +1350,24 @@ export const mockInProgressTrue = [
       }
     }
   ] as unknown;
+
+  export const CreateMatch = {
+    homeTeam: 5,
+    awayTeam: 7,
+    homeTeamGoals: 5,
+    awayTeamGoals: 0,
+  };
+
+  export const CreateSameTimesMatch = {
+    homeTeam: 7,
+    awayTeam: 7,
+    homeTeamGoals: 5,
+    awayTeamGoals: 0,
+  };
+
+  export const CreateInexistIdTimesMatch = {
+    homeTeam: 7000000,
+    awayTeam: 7,
+    homeTeamGoals: 5,
+    awayTeamGoals: 0,
+  };

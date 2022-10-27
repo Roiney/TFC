@@ -30,3 +30,5 @@ export const noPasswordLoginMock = {
   };
 
   export const mockToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InJvbGUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn0sImlhdCI6MTY2NjcwODI1MSwiZXhwIjoxNjY3NTcyMjUxfQ.bVqvYyQ6fpMj_K8whKeuLlNESeJQzmjxCNAKy0RPsIo';
+
+  export const mockTokenWrong ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp'
