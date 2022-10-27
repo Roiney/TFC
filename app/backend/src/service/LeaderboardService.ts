@@ -1,16 +1,12 @@
-// import ModelTeams from '../database/models/TeamModel';
-import ModelMatches from '../database/models/MatchesModel';
+import { any } from 'sequelize/types/lib/operators';
+import sequelize from '../database/models';
+import sql from '../utilis/sqlString';
 
 export default class leaderboardService {
   public getleaderboard = async () => {
-    // const Times = await ModelTeams.findAll();
+    const [teste] = await sequelize.query(sql.homeString);
+    console.log(teste);
 
-    const allMatches = await ModelMatches.findAll({
-      where: { inProgress: false },
-    });
-
-    console.log('allMatches', allMatches);
-
-    return allMatches;
+    return teste;
   };
 }
