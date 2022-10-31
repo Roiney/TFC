@@ -1,4 +1,4 @@
-#Trybe Futebol Clube
+<h1 align="center"> Trybe Futebol Clube </h1>
 
  O `TFC` é um site informativo sobre partidas e classificações de futebol! ⚽️
 
@@ -8,8 +8,7 @@
 
 Com a junção de um front-end construido pela Trybe com o meu back-end, temos um aplicativo componentizado, que usufrui de uma API REST organizada com o ORM Sequelize.
 
-
-#Gif da aplicação consumindo o back-end.
+<h1 align="center"> Gif da aplicação consumindo o back-end </h1>
 
 
 
